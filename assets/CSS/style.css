@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 html {
     font-family: 'Open Sans', sans-serif; 
@@ -20,11 +21,7 @@ a, ul, li {
     overflow: hidden;
     background-color: #222;
     color: #fff;
-    padding: 20px 10px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+    padding: 10px 10px;
   }
   
 .header a {
@@ -56,7 +53,6 @@ a, ul, li {
 .header-right {
     float: right;
 }
-  
 /* nav complete */
 /* main starts */
 main {
@@ -67,7 +63,7 @@ main {
     background-color: #222;
     color: #fff;
     padding: 10px 0px;
-    margin: 70px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 .dp-container {
     display: flex;
@@ -90,7 +86,7 @@ main {
 }
 .headline {
     font-size: 2em;
-    margin: 0px 0px 20px 0px;
+    margin: 4px 0px 20px 0px;
 }
 .btn {
     border-radius: 4px;
@@ -103,7 +99,7 @@ main {
     margin: 0px 0px 20px 0px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
+    margin: 15px 0px;
 }
 .btn span {
     cursor: pointer;
@@ -132,22 +128,22 @@ main {
     font-size: 5em;
     margin: 50px 0px 20px 0px;
 }
-.fa-brands {
+.social {
     border-radius: 9px;
-    padding: 8px;
+    padding: 5px 15px;
     margin: 0px 15px;
 }
-.fa-brands:hover {
+.social:hover {
     background-color: #fff;
     transition: all .5s;
     color: #111;
-
 }
 .summary {
     background-color: #fff;
     color: #222;
     padding: 20px 70px;
     text-align: center;
+    scroll-margin-top: 10px;
 }
 .summary .heading {
     text-align: center;
@@ -179,5 +175,8 @@ main {
     
     .header-right {
       float: none;
+    }
+    .summary {
+        padding: 5px 10px;
     }
 }
