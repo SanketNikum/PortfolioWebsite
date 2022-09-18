@@ -1,5 +1,13 @@
 /* font Awesome */
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+/* Variables for Color */
+:root {
+    --primary-color : #111; 
+    --secondary-color : rgb(245,245,245);   /* hex code - #f5f5f5*/
+    --pop-up : rgb(30,144,255); 
+}
+/* Variables for Color */
 * {
     margin: 0;
     padding: 0;
@@ -9,61 +17,76 @@
 html {
     font-family: 'Open Sans', sans-serif; 
     font-size: 10px;
+    background-color: var(--primary-color);
 }
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+/* scrollbar */
 a, ul, li {
     color: inherit;
     text-decoration: none;
     list-style-type: none;
-} 
-
-/*  */
-.header {
-    overflow: hidden;
-    background-color: #222;
-    color: #fff;
-    padding: 10px 10px;
-  }
-  
-.header a {
-    float: left;
-    text-align: center;
-    padding: 10px 12px;
-    margin: 0px 7px;
-    text-decoration: none;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
 }
-  
-.header a.logo {
-    font-size: 25px;
-    font-weight: bold;
+/* navigation */
+header li, a ,button {
+    font-weight: 500;
+    color: var(--secondary-color);
 }
-  
-.header a:hover {
-    background-color: #ddd;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 30px 10%;
+    font-size: 2em;
+    position: sticky;
+    top: 0;
+}
+.logo {
+    cursor: pointer;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover {
+    color: dodgerblue;
+}
+.cta > .btn-contact {
+    padding: 10px 25px;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cta > button:hover {
+    background-color: aliceblue;
     color: #111;
 }
-  
-.header a.active {
-    background-color: dodgerblue;
-    color: white;
-}
-  
-.header-right {
-    float: right;
-}
-/* nav complete */
+/* navigation complete */
 /* main starts */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #222;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 10px 0px;
     margin: 0px 0px 0px 0px;
+    scroll-margin-top: 80px;
 }
 .dp-container {
     display: flex;
@@ -90,9 +113,9 @@ main {
 }
 .btn {
     border-radius: 4px;
-    background-color: dodgerblue;
+    background-color: var(--pop-up);
     border: none;
-    color: #FFF;
+    color: var(--secondary-color);
     text-align: center;
     font-size: 1.7em;
     padding: 12px 16px;
@@ -134,17 +157,17 @@ main {
     margin: 0px 15px;
 }
 .social:hover {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     transition: all .5s;
-    color: #111;
+    color: var(--primary-color);
 }
 .summary {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: #fff;
-    color: #222;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 20px 70px;
     scroll-margin-top: 0px;
 }
@@ -207,9 +230,12 @@ main {
 
 
 /* Media Queries */
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     main {
         width: 100%;
+    }
+    .header {
+        position: relative;
     }
     .dp-container img {
         width: 60%;
@@ -226,5 +252,45 @@ main {
     }
     .summary {
         padding: 5px 10px;
+        flex-direction: column;
     }
+    .summary .col {
+        width: 100%;
+    }
+} */
+
+/*  */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        overflow: hidden;
+    }
+    .header {
+        position: relative;
+    }
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
