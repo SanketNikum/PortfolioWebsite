@@ -3,7 +3,7 @@
 
 /* Variables for Color */
 :root {
-    --primary-color : #111; 
+    --primary-color : #222;
     --secondary-color : rgb(245,245,245);   /* hex code - #f5f5f5*/
     --pop-up : rgb(30,144,255); 
 }
@@ -16,8 +16,7 @@
 }
 html {
     font-family: 'Open Sans', sans-serif; 
-    font-size: 10px;
-    background-color: var(--primary-color);
+    font-size: 20px;
 }
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -31,6 +30,76 @@ html {
 }
 /* Reset */
 a, li {
+    color: inherit;
     text-decoration: none;
     list-style-type: none;
+}
+/* header */
+header {
+    width: 20%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: grid;
+}
+header > h2 {
+    text-align: center;
+    text-transform: capitalize;
+    padding: 30% 0px 0px 0px;
+    display: inline-block;
+}
+.colorChange {
+    color: var(--pop-up);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.navbar li {
+    display: inline;
+    padding: 10px 0px;
+}
+.navbar>li:hover {
+    color: var(--pop-up);
+}
+.navbar li > a {
+    padding: 0px 20px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social {
+    display: flex;
+    flex-direction: row;
+}
+.social li {
+    padding: 0px 9px;
+}
+.social li > a {
+    font-size: 1.5em;
+}
+.social li > a > i {
+    margin: 0;
+    padding: 0;
+}
+.social li > a > i:hover {
+    color: var(--pop-up);
+}
+main {
+    margin-left: 21%;
 }
