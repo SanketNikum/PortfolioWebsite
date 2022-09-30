@@ -1,6 +1,3 @@
-/* font Awesome */
-@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
-
 /* Variables for Color */
 :root {
     --primary-color : #000;
@@ -19,7 +16,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all .2s linear;
     scroll-behavior: smooth;
 }
@@ -115,6 +111,7 @@ nav {
 /* main */
 main {
     background-color: var(--primary-color);
+    color: var(--secondary-color);
     margin-left: 20%;
     font-size: 1.1em;
 }
@@ -126,10 +123,12 @@ main {
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    /* padding: 10px 25px; */
+    padding: 10px 25px;
 }
 .hero .wrapper {
     width: 90%;
+    margin: auto;
+    padding: 0px 20px;
 }
 .btn button {
     padding: 10px 14px;
@@ -144,4 +143,219 @@ main {
     color: var(--primary-color);
 }
 /* Hero */
+/* about */
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.col {
+    width: 50%;
+    /* background-color: #222; */
+}
+.col-1 > .inner-wrapper >p > i {
+    padding-right: 10px;
+}
+.col-1 {
+    padding: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.inner-wrapper {
+    line-height: 2;
+}
+.col-2 img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+}
+/* about */
+/* Skills */
+.skills {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 40px 20px;
+}
+.skills .wrapper h2 {
+    text-align: center;
+}
+.skills-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 22px 0px 0px 0px;
+}
+.skills-card {
+    width: 25%;
+    padding: 15px 0px;
+    text-transform: capitalize;
+    margin: 5px 5px;
+    border-radius: 10px;
+    background-color: #222;
+}
+.skills-card .skills-logo {
+    text-align: center;
+    font-size: 2em;
+}
+.skills-card .skills-name {
+    text-align: center;
+}
+/* Skills */
+/* Education */
+.education-timeline {
+    /* height: 100vh; */
+    padding: 20px 20px;
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+  /* Container around content */
+.timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--secondary-color);
+    border: 4px solid var(--pop-up);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+/* Place the container to the left */
+.left {
+    left: 0;
+}  
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: #222;
+    color: var(--secondary-color);
+    position: relative;
+    border-radius: 6px;
+  }
+  .content .ed-year {
+    font-size: 1.8vw;
+  }
+  .content .ed-cr-name {
+    font-size: 1.2vw;
+  }
+  .content .ed-college {
+    font-size: 1.1vw;
+  }
+  .content .ed-uni {
+    font-size: 0.9vw;
+  }
+  .content .ed-about {
+    font-size: 1vw;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+/* Education */
 /* main */
