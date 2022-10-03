@@ -59,8 +59,9 @@ button > .closeIcon {
     padding: 0.8rem 0px;
     margin: 0;
     display: block;
+    border-radius: 10px;
 }
-.menuItem:hover {
+.menuItem:hover:not(.active) {
     color: var(--pop-up);
 }
 .showMenu {
@@ -105,6 +106,9 @@ section > .wrapper {
     background-color: var(--pop-up);
     color: var(--primary-color);
     transition: 0.3s all ease-in-out;
+    border-radius: 10px;
+    outline: none;
+    border: none;
 }
 .btn-about:hover {
     transform: scale(1.1, 1.2);
@@ -117,6 +121,10 @@ section > .wrapper {
 /* Hero */
 .colorChange {
     color: var(--pop-up);
+}
+a.active {
+    background-color: var(--pop-up);
+    color: var(--primary-color);
 }
 /* Media Query */
 /* Mobile (Small) */
@@ -147,9 +155,9 @@ section > .wrapper {
         flex-direction: row;
         transform: none;
         padding: 0px;
+        background-color: var(--primary-color);
     }
     li {
-        background-color: var(--primary-color);
         margin: 0.5rem 0 0 0;
         border-radius: 10px;
     }
