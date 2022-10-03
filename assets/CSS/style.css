@@ -62,13 +62,14 @@ header > h2 {
 .colorChange {
     color: var(--pop-up);
 }
+/* nav */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .navbar {
-    width: 40%;
+    width: 70%;
     display: flex;
     flex-direction: column;
 }
@@ -107,6 +108,7 @@ nav {
 .social li > a > i:hover {
     color: var(--pop-up);
 }
+/* nav */
 /* header completed */
 /* main */
 main {
@@ -358,4 +360,13 @@ main {
     }
   }
 /* Education */
+/* Work */
+.work .wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Work */
 /* main */
