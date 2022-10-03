@@ -8,7 +8,10 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/CSS/style.css">
     <!-- Font Awesome -->
@@ -16,18 +19,23 @@
 </head>
 <body>
     <header>
-        <h2><span class="colorChange">Sanket</span> Nikum</h2>
-        <nav>
-            <ul class="navbar">
-                <li><a href="#" class="link">Home</a></li>
-                <li><a href="#about" class="link">About</a></li>
-                <li><a href="#skills" class="link">Skills</a></li>
-                <li><a href="#education-timeline" class="link">Education</a></li>
-                <li><a href="#" class="link">Projects</a></li>
-                <li><a href="#" class="link">Contact</a></li>
+        <nav class="navbar">
+            <a href="" class="nav-branding">Dev</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="#home" >Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" >About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills" >Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education-timeline" >Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects" >Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        <div class="social-links">
+        <!-- <div class="social-links">
             <ul class="social">
                 <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
                 <li><a href=""><i class="fa-brands fa-github"></i></i></a></li>
@@ -35,7 +43,7 @@
                 <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
                 <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
             </ul>
-        </div>
+        </div> -->
     </header>
     <main>
         <section class="hero">
