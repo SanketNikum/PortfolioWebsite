@@ -20,12 +20,10 @@ a, li {
     list-style-type: none;
     color: inherit;
 }
-header {
-    background-color: var(--header-color);
-    height: 65px;
-}
 .hamburger {
     position: fixed;
+    outline: none;
+    border: none;
     z-index: 100;
     top: 1rem;
     right: 1rem;
@@ -36,6 +34,8 @@ header {
 }
 .hamburger:hover {
     background-color: var(--pop-up);
+    transform: scale(1.1, 1.2);
+    background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 button > .closeIcon {
@@ -68,7 +68,52 @@ button > .closeIcon {
 }
 /* nav complete */
 /* Hero */
-
+.hero {
+    height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section > .wrapper {
+    padding: 0rem 3rem;
+}
+.greeting {
+    font-size: 1.5rem;
+    font-size: 600;
+}
+.name {
+    font-weight: 900;
+    font-size: 4rem;
+}
+.headline {
+    border-bottom: 1px solid var(--pop-up);
+    font-size: 1.2rem;
+}
+.intro {
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.7;
+    font-size: 1.2rem;
+}
+.btn-about {
+    font-size: 1.2rem;
+    padding: 8px 14px;
+    background-color: var(--pop-up);
+    color: var(--primary-color);
+    transition: 0.3s all ease-in-out;
+}
+.btn-about:hover {
+    transform: scale(1.1, 1.2);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.btn-about > a {
+    color: inherit;
+}
 /* Hero */
 .colorChange {
     color: var(--pop-up);
@@ -114,5 +159,23 @@ button > .closeIcon {
 }
 /* laptop (large) */
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-direction: row;
+        transform: none;
+        padding: 0px;
+    }
+    li {
+        background-color: var(--primary-color);
+        margin: 0.5rem 0 0 0;
+        border-radius: 10px;
+    }
+    li > .menuItem{
+        padding: 10px 14px;
+    }
 }
