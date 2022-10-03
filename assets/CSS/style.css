@@ -79,7 +79,7 @@ section {
     align-items: center;
 }
 section > .wrapper {
-    padding: 0rem 3rem;
+    padding: 0rem 2rem;
 }
 .greeting {
     font-size: 1.5rem;
@@ -133,7 +133,7 @@ section > .wrapper {
 }
 /* Tablet */
 @media screen and (max-width: 768px) and (min-width: 425px) {
-
+    
 }
 /* Laptop (Medium) */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
