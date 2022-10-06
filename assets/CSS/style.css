@@ -189,6 +189,9 @@ a.active {
     height: auto;
     padding-top: 10%;
 }
+.project-section > .wrapper {
+    width: 100%;
+}
 .project-section > .wrapper > h2 {
     text-align: center;
 }
@@ -200,7 +203,7 @@ a.active {
     flex-direction: column;
 }
 .p-card > img {
-    width: 400px;
+    width: 100%;
     height: auto;
     border-radius: 10px 10px 0px 0px;
     padding: 0px 0px 10px 0px;
