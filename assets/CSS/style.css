@@ -67,7 +67,6 @@ button > .closeIcon {
     transform: translateY(0);
 }
 /* nav complete */
-/* Hero */
 section {
     height: 100vh;
     background-color: var(--primary-color);
@@ -77,7 +76,16 @@ section {
     align-items: center;
 }
 section > .wrapper {
-    padding: 0rem 2rem;
+    width: 100%;
+    padding: 0px 20px;
+}
+/* Hero */
+.skills-wrapper {
+    width: 100%;
+}
+.skill-card {
+    width: 100%;
+    background-color: #e38528;
 }
 .greeting {
     font-size: 1.5rem;
@@ -195,10 +203,13 @@ a.active {
 .project-section > .wrapper > h2 {
     text-align: center;
 }
+.project-wrapper {
+    width: 100%;
+}
 .p-card {
     background-color: #333;
     border-radius: 10px;
-    margin-top: 6%;
+    margin: 6% 0px;
     display: flex;
     flex-direction: column;
 }
@@ -375,6 +386,15 @@ a.active {
     }
     /* Skills */
     /* Projects */
+    .project-section > .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .project-wrapper {
+        width: 80%;
+    }
     .p-card {
         background-color: #333;
         border-radius: 10px;
@@ -466,6 +486,15 @@ a.active {
     }
     /* Skills */
     /* Projects */
+    .project-section > .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .project-wrapper {
+        width: 80%;
+    }
     .p-card {
         background-color: #333;
         border-radius: 10px;
