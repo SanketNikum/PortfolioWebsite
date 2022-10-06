@@ -247,9 +247,10 @@ a.active {
 }
 /* Projects */
 /* Contact */
+/* col left */
 .contact-section {
     height: auto;
-    padding-top: 10%;
+    padding-top: 4%;
 }
 .contact-section > .wrapper {
     width: 100%;
@@ -284,6 +285,37 @@ a.active {
 .ic > i:hover {
     color: var(--secondary-color);
 }
+
+/* col right */
+.col-2 {
+    text-align: left;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: var(--pop-up);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    transform: scale(1.1, 1.2);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
 /* Contact */
 
 
@@ -406,6 +438,9 @@ a.active {
         border-radius: 10px 0px 0px 10px;
         padding: 0px 0px 0px 0px;
     }
+    .p-card > .p-info {
+        padding: 15px 10px;
+    }
     /* Projects */
 }
 
@@ -506,11 +541,20 @@ a.active {
         border-radius: 10px 0px 0px 10px;
         padding: 0px 0px 0px 0px;
     }
+    .p-card > .p-info {
+        padding: 15px 10px;
+    }
     /* Projects */
     /* Contact */
     .contact-section > .wrapper {
         display: flex;
         flex-direction: row;
+    }
+    .wrapper > .col-1 {
+        width: 40%;
+    }
+    .wrapper > .col-2 {
+        width: 60%;
     }
     .info-box {
         width: 50%;
@@ -521,5 +565,10 @@ a.active {
         align-items: center;
         flex-direction: column;
     }
+    input[type=text], select, textarea {
+        width: 70%;
+        display: block;
+      }
+      
     /* Contact */
 }
